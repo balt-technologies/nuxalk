@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+define('NUXALK_VERSION', '0.0.1');
+
+foreach ([__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php'] as $file) {
+    if (file_exists($file)) {
+        define('NUXALK_AUTOLOAD_FILE', $file);
+        break;
+    }
+}
+
+require NUXALK_AUTOLOAD_FILE;
+
+use Balt\Nuxalk\Commands\CheckComposer;
+use Symfony\Component\Console\Application;
+
+
+$application = new Application();
+$application->setName('nuxalk');
+$application->add(new CheckComposer());
+$application->setVersion(NUXALK_VERSION);
+
+$application->run();
+
+

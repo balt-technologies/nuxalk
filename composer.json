@@ -1,0 +1,30 @@
+{
+    "name": "balt-technologies/nuxalk",
+    "authors": [
+        {
+            "name": "Tobias Redmann",
+            "email": "tobias.redmann@balt.de"
+        }
+    ],
+    "license": ["MIT"],
+    "require": {
+        "symfony/console": "^5.2",
+        "composer/semver": "^3.2",
+        "knplabs/packagist-api": "^1.7"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9",
+        "nunomaduro/phpinsights": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Balt\\Nuxalk\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/nuxalk"
+    ],
+    "description": "Check for updates based on PHP Composer files"
+}
