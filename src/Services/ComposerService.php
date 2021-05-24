@@ -9,10 +9,10 @@ use Balt\Nuxalk\Models\Composer\RequiredPackage;
 
 class ComposerService
 {
-    public function __construct(string $composerJson, string $composerLock)
-    {
-        $this->composerJson = $composerJson;
-        $this->composerLock = $composerLock;
+    public function __construct(
+        private string $composerJson,
+        private string $composerLock
+    ) {
     }
 
     public function withJson(string $composerJson): self

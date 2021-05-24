@@ -20,7 +20,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Balt\\Nuxalk\\": "src/"
+            "Balt\\Nuxalk\\": "src/",
+            "Tests\\": "tests/"
         }
     },
     "bin": [

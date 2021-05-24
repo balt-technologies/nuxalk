@@ -17,7 +17,6 @@ class PackagistService
     }
 
     /**
-     * @param string $packageName
      * @return array<string>
      */
     public function getVersions(string $packageName): array
